@@ -17,7 +17,7 @@ setup(
     url='https://github.com/DDPSE/minoan',
     author='Sophie Kim, Fani Boukouvala',
     author_email='sophiekim0205@gmail.com, fani.boukouvala@chbe.gatech.edu',
-    packages=['MINOAN'],
+    packages=['minoan'],
     install_requires=['numpy','pandas','pyomo','pyDOE','scipy','scikit-learn','joblib'],
 
 )
