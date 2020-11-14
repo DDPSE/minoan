@@ -8,11 +8,7 @@ import sys
 import numpy as np
 import pandas as pd
 import time 
-
-
-
-
-# from utils import *
+import warnings
 from modelopt import *
 from sample import *
 from utils import *
@@ -59,7 +55,24 @@ class minoan:
         self.hybrid = 0 # initialize hybrid status 
         self.cwd = os.getcwd()
         self.put = put # 1 to print result as csv file
-            
+        self.probcheck() 
+    
+    def probcheck(self):
+        
+        if len(self.prob.lb) != len(self.prob.ub):
+            warnings.warn('Length of lower bound != length of upper bound. Please check the bounds')
+        
+        if len(self.prob.ub) != len(self.prob.vartype):
+            warnings.warn('Length of variable type != length of lower bound')
+        
+        if len(self.prob.ub) != len(self.prob.vartype):
+            warnings.warn('Length of variable type != length of lower bound')
+        
+        if len(self.prob.contype) != len(self.prob.conrhs):
+            warnings.warn('Constraint info length does not match. Please check contype and conrhs')
+        
+        
+     
     def itersol(self, x, y, scorecrit):
         ''' 
         Rank all intermediate solutions and return the best solution
