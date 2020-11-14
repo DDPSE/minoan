@@ -10,11 +10,8 @@ NLP Test problem
 Retrieved from: http://www.minlplib.org/
 '''
 
-import minoan 
-# import sys
-# from utils import info
-# from main import *
-# import numpy as np
+from minoan import MINOAN
+import numpy as np
 
 def simulator(x):
 
@@ -46,5 +43,5 @@ contype = ['L','L','L','L','L']
 conrhs = [16,-1,24,12,3]
 solver = 'gams' # or neos if gams is not available 
 
-opt = minoan(vartype, lb, ub, contype, conrhs, graycons, simulator, modeltype, onehotencoding, nprocs, maxeval, solver, put = 0)
+opt = MINOAN(vartype, lb, ub, contype, conrhs, graycons, simulator, modeltype, onehotencoding, nprocs, maxeval, solver, put = 0)
 stat, xbest, ybest, vio = opt.main()

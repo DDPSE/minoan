@@ -817,7 +817,7 @@ class pyomoopt:
         model = self.prob.graycons(model)
         model = self.graycon_transform(model)
         
-        model.pprint()
+        # model.pprint()
         if len(self.prob.binsol) > 0:
             model = self.graycon_fixbinsol(model)
         

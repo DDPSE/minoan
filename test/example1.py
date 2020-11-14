@@ -6,12 +6,9 @@ Retrieved from: http://www.minlplib.org/ex1221.html
 Black-box problem: all constraints and objective unknown 
 '''
 
-import minoan 
-import sys
-from utils import info
-from main import *
+from minoan import MINOAN
 import numpy as np
-import pyomo.environ as pe 
+
 
 def simulator(x):
     # black box simulation 
@@ -45,5 +42,5 @@ contype = ['E','E','L','G','L']
 conrhs = [1.25, 3, 1.6, -3, 0]
 
 # optimize! 
-opt = minoan(vartype, lb, ub, contype, conrhs, graycons, simulator, modeltype, onehotencoding, nprocs, maxeval, 'gams', put = 0)
+opt = MINOAN(vartype, lb, ub, contype, conrhs, graycons, simulator, modeltype, onehotencoding, nprocs, maxeval, 'gams', put = 0)
 stat, xbest, ybest, vio = opt.main()

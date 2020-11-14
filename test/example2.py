@@ -6,10 +6,7 @@ Retrieved from: http://www.minlplib.org/ex1221.html
 Gray-box problem: con1 and con5 are known 
 '''
 
-import minoan 
-import sys
-from utils import info
-from main import *
+from minoan import MINOAN
 import numpy as np
 import pyomo.environ as pe 
 
@@ -25,7 +22,6 @@ def simulator(x):
     return np.array([obj, con2, con3, con4])
 
 # define gray box constraints; must be in this format 
-import pyomo.environ as pe 
 def graycons(model):
     # add known constraints 
     model.gray = pe.ConstraintList()
@@ -45,6 +41,6 @@ contype = ['E','L','G']
 conrhs = [3, 1.6, -3]
 
 
-opt = minoan(vartype, lb, ub, contype, conrhs, graycons, simulator, modeltype, onehotencoding, nprocs, maxeval, 'gams', put = 0)
+opt = MINOAN(vartype, lb, ub, contype, conrhs, graycons, simulator, modeltype, onehotencoding, nprocs, maxeval, 'gams', put = 0)
 stat, xbest, ybest, vio = opt.main()
 
