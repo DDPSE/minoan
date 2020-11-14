@@ -9,8 +9,6 @@ import pyDOE as pD
 from sklearn.preprocessing import OneHotEncoder 
 import math as m
 import itertools as it
-import os
-import subprocess
 
 class sampling: 
     

@@ -4,9 +4,9 @@ Created on Wed Aug 26 10:57:11 2020
 
 @author: k3148
 """
-# import numpy as np
-# import scipy.stats as ss
-# from joblib import Parallel, delayed
+import numpy as np
+import scipy.stats as ss
+from joblib import Parallel, delayed
 
 
 class info:
