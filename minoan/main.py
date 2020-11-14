@@ -16,7 +16,7 @@ from minoan.sample import *
 from minoan.utils import *
 from minoan.pyomo_opt import *
 
-class minoan: 
+class Minoanopt: 
     
     ''' 
     Main class for MINOAN 

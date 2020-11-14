@@ -14,6 +14,7 @@ import warnings
 from scipy.spatial import distance 
 import pyomo.environ as pe
 
+from minoan.main import *
 from minoan.modelopt import *
 from minoan.sample import *
 from minoan.utils import *
