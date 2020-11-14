@@ -10,7 +10,7 @@ from setuptools import setup
 
 setup(
     # Needed to silence warnings (and to be a worthwhile package)
-    name='minoan',
+    name='MINOAN',
     version='0.0.1',
     license = 'GT',
     description='Mixed INteger Optimization using ApproximatioNs',

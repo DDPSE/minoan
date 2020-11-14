@@ -11,10 +11,10 @@ Retrieved from: http://www.minlplib.org/
 '''
 
 import minoan 
-import sys
-from utils import info
-from main import *
-import numpy as np
+# import sys
+# from utils import info
+# from main import *
+# import numpy as np
 
 def simulator(x):
 
