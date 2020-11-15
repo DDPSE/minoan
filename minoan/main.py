@@ -81,7 +81,7 @@ class MINOAN:
         nbin = self.prob.vartype.count('B')
         
         for i in range(ncont):
-            var = vartype[i] #self.prob.vartype[i]
+            var = self.prob.vartype[i]
             if var == 'B':
                 warnings.warn('Binary variables are specified before real variables. \
                               Real variables should be specified first')
