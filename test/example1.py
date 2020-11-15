@@ -23,6 +23,8 @@ def simulator(x):
 graycons = None
 
 # variable type - R for continuous and B for binary
+# real (continuous) variables should be specified before binary variables
+# for example, ['R','B','R'] is not acceptable. It should be ['R','R','B']
 vartype = ['R','R','B','B','B']
 
 # lower and upper bounds
