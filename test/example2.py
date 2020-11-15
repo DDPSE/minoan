@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 
-'''
+"""
+MINOAN: DDPSE Lab @ GT 
+Copyright (C) 2020 - Sophie Kim 
+
 Test problem ex1221 
 Retrieved from: http://www.minlplib.org/ex1221.html
 Gray-box problem: con1 and con5 are known 
-'''
+"""
 
 from minoan import MINOAN
 import numpy as np
