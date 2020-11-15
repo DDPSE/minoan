@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 
 '''
+MINOAN: DDPSE Lab @ GT 
+Copyright (C) 2020 - Sophie Kim 
+
 Test problem ex1221 
 Retrieved from: http://www.minlplib.org/ex1221.html
 Black-box problem: all constraints and objective unknown 
