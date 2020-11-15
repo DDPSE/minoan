@@ -21,7 +21,8 @@ class MINOAN:
     ''' 
     Main class for MINOAN 
     Args:
-        vartype (list): variable type; R for continuous and B for binary 
+        vartype (list): variable type; R for continuous and B for binary. Note that R should always come before B.  
+            ex. ['R',R','R',B'] is correct; ['R','B','R','R'] is incorrect
         lb (list): variable lower bound
         ub (list): variable upper bound
         contype (list): constraint type; E for equality constraint and G or L for inequality constraint
@@ -74,7 +75,17 @@ class MINOAN:
         if len(self.prob.contype) != len(self.prob.conrhs):
             warnings.warn('Constraint info length does not match. Please check contype and conrhs')
         
+        # check for variable type 
+        # real variable should come before binary variables 
+        ncont = self.prob.vartype.count('R')
+        nbin = self.prob.vartype.count('B')
         
+        for i in range(ncont):
+            var = vartype[i] #self.prob.vartype[i]
+            if var == 'B':
+                warnings.warn('Binary variables are specified before real variables. \
+                              Real variables should be specified first')
+    
      
     def itersol(self, x, y, scorecrit):
         ''' 
