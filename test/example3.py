@@ -1,14 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Nov 14 09:38:54 2020
+MINOAN: DDPSE Lab @ GT 
+Copyright (C) 2020 - Sophie Kim 
 
-@author: k3148
-"""
-
-'''
 NLP Test problem 
 Retrieved from: http://www.minlplib.org/
-'''
+"""
 
 from minoan import MINOAN
 import numpy as np
