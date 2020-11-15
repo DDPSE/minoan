@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Aug 26 09:28:15 2020
-
-@author: k3148
+MINOAN: DDPSE Lab @ GT 
+Copyright (C) 2020 - Sophie Kim 
 """
 import numpy as np
 import time
