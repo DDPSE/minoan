@@ -3,7 +3,13 @@ Mixed INteger Optimization using ApproximatioNs
 (Beta Version 0.0.1)
 
 ## About 
-MINOAN is an open-source Python library used for machine learning-based (or surrogate-based) optimization. The alglorithm supports constrained *NLP* and *MINLP* (with binary variables) problems. It currently supports the following machine learning models:
+MINOAN is an open-source Python library used for machine learning-based (or surrogate-based) optimization. The alglorithm supports constrained *NLP* and *MINLP* (with binary variables) problems: 
+```math
+min f(x,y) 
+s.t. g1(x,y)>=0, g2(x,y)<= 0, g3(x,y)=0
+x_l <= x <= x_u, y = {0,1} 
+```
+It currently supports the following machine learning models:
 * Artificial Neural Network (tanh and relu activation function)
 * Gaussian Process
 * Support Vector Regression 
