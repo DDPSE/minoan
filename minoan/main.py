@@ -26,7 +26,7 @@ class MINOAN:
         ub (list): variable upper bound
         contype (list): constraint type; E for equality constraint and G or L for inequality constraint
         conrhs (list): constraint right hand side (e.g., g(x)>=conrhs)
-        graycons (function): granconstraint if known; pyomo model 
+        graycons (function): gray box constraint if known; pyomo model 
         simulator (function): black-box simulation
         modeltype (str): surrogate model type; ANN, SVR, GP, or hybrid
         onehotencoding (int): 1 for MI model construction; 0 for relaxed model construction
