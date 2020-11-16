@@ -43,7 +43,8 @@ maxeval = 3000
 contype = ['E','L','G']
 conrhs = [3, 1.6, -3]
 
+solver = 'neos' # you can change this to gams if you have access to gams 
 
-opt = MINOAN(vartype, lb, ub, contype, conrhs, graycons, simulator, modeltype, onehotencoding, nprocs, maxeval, 'gams', put = 0)
+opt = MINOAN(vartype, lb, ub, contype, conrhs, graycons, simulator, modeltype, onehotencoding, nprocs, maxeval, solver, put = 0)
 stat, xbest, ybest, vio = opt.main()
 
